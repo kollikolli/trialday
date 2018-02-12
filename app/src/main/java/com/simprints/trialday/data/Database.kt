@@ -1,17 +1,17 @@
 package com.simprints.trialday.data
 
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.DatabaseReference
 
 
 
 
 object Database {
 
-    //val database = FirebaseDatabase.getInstance()
+    private val database = FirebaseDatabase.getInstance()
+    private val factref = database.getReference("fact")
 
-    fun write(item: String) {
-        //val myRef = database.getReference("message")
-        //myRef.setValue("Hello, World!");
+
+    fun writeFact(fact: Fact) {
+        factref.child(fact.fact).setValue(fact.user)
     }
 }

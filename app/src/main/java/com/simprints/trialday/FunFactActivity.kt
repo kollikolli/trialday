@@ -1,12 +1,11 @@
 package com.simprints.trialday
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
-import com.google.firebase.database.FirebaseDatabase
 import com.simprints.trialday.data.Database
+import com.simprints.trialday.data.Fact
 
 class FunFactActivity : AppCompatActivity() {
 
@@ -14,16 +13,12 @@ class FunFactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fun_fact)
 
-
-
         val submitButton: Button = findViewById(R.id.submitButton)
         val factText: EditText = findViewById(R.id.factText)
-        submitButton.setOnClickListener { submitToFireBase(factText.text.toString()) }
+        val userText: EditText = findViewById(R.id.nameText)
+        submitButton.setOnClickListener { Database.writeFact(Fact(userText.text.toString(), factText.text.toString())) }
     }
 
-    fun submitToFireBase(text: String) {
-        //Database.write(text)
-    }
 
 
 }
