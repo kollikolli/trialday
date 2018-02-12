@@ -12,6 +12,6 @@ object Database {
 
 
     fun writeFact(fact: Fact) {
-        factref.child(fact.fact).setValue(fact.user)
+        factref.push().setValue(fact)
     }
 }
