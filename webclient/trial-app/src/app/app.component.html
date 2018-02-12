@@ -1,4 +1,6 @@
 <h1>Fun facts</h1>
+
+<input [(ngModel)]="query" (ngModelChange)="queryItems()" placeholder="name">
 <table>
   <tr class="text" *ngFor="let item of items | async">
     <td>{{item.user}}</td>

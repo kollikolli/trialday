@@ -8,11 +8,16 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Trial-Day Firebase';
+  query = ""
   items: Observable<any[]>;
+  db: AngularFireDatabase
 
   constructor(db: AngularFireDatabase) {
-    this.items = db.list('fact').valueChanges()
-    this.items.subscribe(console.log);
+    this.db = db
+    this.items = db.list('fact',  ref => ref.orderByChild("user").startAt(this.query)).valueChanges()
+  }
+
+  queryItems() {
+    this.items = this.db.list('fact',  ref => ref.orderByChild("user").startAt(this.query)).valueChanges()
   }
 }
