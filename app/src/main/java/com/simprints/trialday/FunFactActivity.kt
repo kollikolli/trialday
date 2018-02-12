@@ -19,7 +19,9 @@ class FunFactActivity : AppCompatActivity() {
         val userText: EditText = findViewById(R.id.nameText)
         submitButton.setOnClickListener {
             Database.writeFact(Fact(userText.text.toString(), factText.text.toString()))
-            Toast.makeText(this,"Wrote data to firebase", Toast.LENGTH_SHORT).show()
+                    .addOnSuccessListener { Toast.makeText(this,"Wrote data to firebase", Toast.LENGTH_SHORT).show() }
+                    .addOnFailureListener{ Toast.makeText(this,"An error occured", Toast.LENGTH_LONG).show() }
+
         }
     }
 
