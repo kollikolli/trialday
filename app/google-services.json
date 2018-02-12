@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "240153165717",
+    "firebase_url": "https://trialday-3258d.firebaseio.com",
+    "project_id": "trialday-3258d",
+    "storage_bucket": "trialday-3258d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240153165717:android:ce91af1412ac6c4c",
+        "android_client_info": {
+          "package_name": "com.simprints.trialday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240153165717-q8njc2cd13psl85lolldcjpltfpc942u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simprints.trialday",
+            "certificate_hash": "83644a46765f6334f549fbad0c7c463b5a83b989"
+          }
+        },
+        {
+          "client_id": "240153165717-pkkf5och6qedd7pb4dqqjiu2c7e49nhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTCOgsaCx1AJ02rCM5hj73OG0prV6D9UQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240153165717-pkkf5och6qedd7pb4dqqjiu2c7e49nhf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
